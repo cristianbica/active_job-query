@@ -9,9 +9,9 @@ Gem::Specification.new do |spec|
   spec.authors       = ["Cristian Bica"]
   spec.email         = ["cristian.bica@gmail.com"]
 
-  spec.summary       = %q{Write a short summary, because Rubygems requires one.}
-  spec.description   = %q{Write a longer description or delete this line.}
-  spec.homepage      = "http://github.com"
+  spec.summary       = %q{ActiveJob query interface.}
+  spec.description   = %q{ActiveJob::Query allows you query enqueued jobs and cancel jobs.}
+  spec.homepage      = "https://github.com/cristianbica/active_job-query"
 
   spec.files         = `git ls-files -z`.split("\x0").reject { |f| f.match(%r{^(test|spec|features)/}) }
   spec.require_paths = ["lib"]

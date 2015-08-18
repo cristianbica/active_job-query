@@ -13,7 +13,7 @@ module ActiveJob
     class Jobs
       attr_accessor :jobs, :queue, :adapter, :type, :klass
       include Enumerable
-      delegate *Enumerable.public_instance_methods, to: :jobs
+      delegate :each, to: :jobs
       alias :size :count
 
       # Returns a collection of jobs.

@@ -18,7 +18,8 @@ class ActiveJobQueryTest < ActiveSupport::TestCase
   end
 
   test "queue size" do
-    queue = ActiveJob::Query::Queue.new(name: 'default')
-    assert_equal 20, queue.size
+    assert_equal 20, ActiveJob::Query::Queue.new(name: 'default').size
+    assert_equal 10, ActiveJob::Query::Queue.new(name: 'urgent').size
+    assert_equal 10, ActiveJob::Query::Queue.new(name: 'low').size
   end
 end

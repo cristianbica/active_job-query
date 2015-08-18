@@ -13,7 +13,7 @@ module ActiveJob
     class Queues
       attr_accessor :queues, :adapter
       include Enumerable
-      delegate *Enumerable.public_instance_methods, to: :queues
+      delegate :each, to: :queues
 
       # Returns a collection of queues an adapter is aware of.
       #
